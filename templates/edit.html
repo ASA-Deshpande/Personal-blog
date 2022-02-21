@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> Edit Post </title> 
+{% endblock %}
+
+{% block body %}
+
+<h1> Editing Post </h1>
+    <hr>
+        <h2> Edit:</h2>
+        <form action="/posts/edit/{{post.id}}" method="POST">
+            <!-- Title:  -->
+            <label for="title">Title:</label>
+            <!-- <input type="text" name = 'title' id = 'title'> -->
+            <input class="form-control" type="text" name = 'title' id = 'title' value="{{post.title}}" aria-label="Enter title">
+            <br>
+            <!-- Type:  -->
+            <label for="posttype">Type:</label>
+            <!-- <input type="text" name = 'posttype' id = 'posttype'> -->
+            <input class="form-control" type="text" name = 'posttype' id = 'posttype' value="{{post.posttype}}" aria-label="Enter type of post">
+            <br>
+           
+            <label for="content">Post:</label>
+            <!-- <input type="text" name = 'content' id = 'content'> -->
+            <textarea class="form-control" name = 'content' id="content" aria-label="Enter content of your post" rows="3">{{post.content}}</textarea>
+
+            <br>
+            
+            <input type = 'submit' value="Save">
+        </form>
+        <!-- <form action="/posts/edit/{{post.id}}" method="POST">
+            Title: <input type="text" name = 'title' id = 'title' value="{{post.title}}">
+            <br>
+            Type: <input type="text" name = 'posttype' id = 'posttype' value="{{post.posttype}}">
+            <br>
+            Post: <input type="text" name = 'content' id = 'content' value="{{post.content}}">
+            <br>
+            
+            <input type = 'submit' value="Save">
+        </form> -->
+        <hr>
+
+{% endblock %}        
