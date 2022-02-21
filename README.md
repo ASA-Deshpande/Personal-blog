@@ -5,4 +5,10 @@ The simple project was created using Flask. Includes a minimalist home page, a p
 
 Here are few images:-
 
+![](Images/Homepg.png)
 
+![](Images/Creating_a_post.png)
+
+![](Images/AllPosts.png)
+
+![](Images/Editing_a_post.png)
